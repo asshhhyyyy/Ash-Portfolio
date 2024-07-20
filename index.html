@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ash Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Fira Code', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: #161b22;
+            color: #58a6ff;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #30363d;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: fadeIn 1s ease-in-out;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #161b22;
+            width: 100%;
+            position: sticky;
+            top: 60px;
+            z-index: 1000;
+        }
+        nav a {
+            color: #c9d1d9;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            background: #30363d;
+            color: #58a6ff;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            background: #161b22;
+            color: #c9d1d9;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #30363d;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .works img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #30363d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .works img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+        .works div, .groups div {
+            margin-bottom: 40px;
+        }
+        a {
+            color: #58a6ff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Ash Portfolio</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#works">Works</a>
+    <a href="#groups">Groups</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>Hello! I'm Ash, a Scripter in the Roblox community. Welcome to my personal portfolio. Here you can find information about my works and how to contact me.</p>
+</section>
+
+<section id="works" class="works">
+    <h2>Works</h2>
+    <p>Here are some of my recent projects as a Scripter:</p>
+    <div>
+        <h3>Military Nametag</h3>
+        <img src="https://cdn.discordapp.com/attachments/990142304079708210/1252163527720964187/image.png?ex=669cb929&is=669b67a9&hm=f26493dbb5faef27d73f348df178ef9ad2a348022275390316eac84298c54be6&" alt="Military Nametag">
+        <p>This nametag is for military that has Custom Name and Custom Division.</p>
+    </div>
+    <div>
+        <h3>License Card</h3>
+        <img src="https://cdn.discordapp.com/attachments/990142304079708210/1245573088918376492/image.png?ex=669c7a56&is=669b28d6&hm=a0e77b3cdf7669bd5107f691b1d8741a062a8369fc624160dae765fbb59ac21f&" alt="License Card">
+        <p>This is a License Card that is a Trello based.</p>
+    </div>
+    <div>
+        <h3>License Plate</h3>
+        <img src="https://cdn.discordapp.com/attachments/990142304079708210/1245573089299791953/Screenshot_2024-05-30_110301.png?ex=669c7a56&is=669b28d6&hm=16c7e81cd7c71a99f0ffa78e839e5b788fedca4f26b42bb3a3cfe85958a0966e&" alt="License Plate">
+        <p>This is also a Trello Based, its a pack with License Card.</p>
+    </div>
+    <div class="etc">
+        <h3>Many More!</h3>
+        <p></p>
+    </div>
+</section>
+
+<section id="groups" class="groups">
+    <h2>Groups</h2>
+    <p>These are some of the groups I've worked with:</p>
+    <div>
+        <h3><a href="https://www.roblox.com/groups/9887688/FA-Filipino-Army#!/about" target="_blank">Filipino Army by UzamakiTot</a></h3>
+        <p>CURRENTLY WORKING.</p>
+    </div>
+    <div>
+        <h3><a href="https://www.roblox.com/groups/12778503/Phi-ippine-Army#!/about" target="_blank">Philippine Army by 24kCxtiezz</a></h3>
+        <p>CURRENTLY WORKING.</p>
+    </div>
+    <div>
+        <h3><a href="https://www.roblox.com/groups/6456516/The-Armed-Forced-Of-The-Phillippines-Army#!/about" target="_blank">The Armed Forced Of The Phillippines Army by roblox_justinee</a></h3>
+        <p>CURRENTLY WORKING.</p>
+    </div>
+    <div class="etc">
+        <h3>Many More!</h3>
+        <p></p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>You can contact me at:</p>
+    <ul style="list-style: none; padding: 0;">
+        <li>Gmail: <a href="https://mail.google.com/mail/u/0/#inbox">fdfjdlynrblx@gmail.com</a>
+            <li>Discord: <a href="https://discord.gg" target="_blank">theashexperience</a></li>
+    </li>
+
+</section>
+
+<footer>
+    <p>&copy; 2024 Ash. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+</body>
+</html>
