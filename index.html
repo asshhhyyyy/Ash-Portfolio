@@ -1,210 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ash Portfolio</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
-        body {
-            font-family: 'Fira Code', monospace;
-            margin: 0;
-            padding: 0;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow-x: hidden;
-        }
-        header {
-            background: #161b22;
-            color: #58a6ff;
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 2px solid #30363d;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            animation: fadeIn 1s ease-in-out;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #161b22;
-            width: 100%;
-            position: sticky;
-            top: 60px;
-            z-index: 1000;
-        }
-        nav a {
-            color: #c9d1d9;
-            padding: 15px 20px;
-            text-decoration: none;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-        nav a:hover {
-            background: #30363d;
-            color: #58a6ff;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            width: 100%;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        footer {
-            background: #161b22;
-            color: #c9d1d9;
-            text-align: center;
-            padding: 20px 0;
-            border-top: 2px solid #30363d;
-            width: 100%;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-in-out;
-        }
-        .works img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid #30363d;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-        .works img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-        }
-        .works div, .groups div {
-            margin-bottom: 40px;
-        }
-        a {
-            color: #58a6ff;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        h1, h2, h3 {
-            font-weight: 600;
-        }
-        h1 {
-            margin-bottom: 0;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ash | BSIT Student Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <h1>Welcome to Ash Portfolio</h1>
-</header>
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo-section">
+      <h2 class="logo">Ash</h2>
+      <span class="badge">BSIT 1st Year</span>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="#profile" class="nav-link">Profile</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#works">Works</a>
-    <a href="#groups">Groups</a>
-    <a href="#contact">Contact</a>
+    <button id="themeToggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+      <span>🌙</span>
+    </button>
+  </div>
 </nav>
 
-<section id="home">
-    <h2>Home</h2>
-    <p>Hello! I'm Ash, a Scripter in the Roblox community. Welcome to my personal portfolio. Here you can find information about my works and how to contact me.</p>
+<!-- Hero Section -->
+<header class="hero" id="profile">
+  <div class="hero-content">
+    
+    <div class="hero-text">
+      <h1 class="hero-title">Bachelor of Science in Information Technology</h1>
+      <p class="hero-subtitle">First-Year Student · Roblox Game Developer</p>
+      
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-count="1">0</span>
+          <span class="stat-label">Current Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="2">0</span>
+          <span class="stat-label">Skills</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="2">0</span>
+          <span class="stat-label">Everyday Hours Coded</span>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="https://www.roblox.com/users/1274739865/profile" target="_blank" class="btn btn-secondary">
+          Roblox Profile →
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
+<section class="section about reveal">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="about-icon">🎮</span>
+        <h3>Game Development</h3>
+        <p>Passionate about creating interactive experiences using Roblox Studio. Currently learning Scripting, UI design, and Building.</p>
+      </div>
+
+      <div class="about-card">
+        <span class="about-icon">💻</span>
+        <h3>Programming</h3>
+        <p>Developing foundational skills in Lua scripting, debugging, and logical problem-solving. Focused on writing clean, maintainable code.</p>
+      </div>
+
+      <div class="about-card">
+        <span class="about-icon">🎨</span>
+        <h3>Design & UX</h3>
+        <p>Learning UI/UX principles through practical portfolio projects. Experience with layout design, user interaction, and visual hierarchy.</p>
+      </div>
+    </div>
+
+    <p class="about-text">
+      I'm a first-year BSIT student with a strong interest in software development and interactive systems. Through Roblox Studio, I've gained hands-on experience in game development, system design, and creative problem-solving. I'm committed to building a solid foundation in programming and design principles while creating meaningful projects.
+    </p>
+  </div>
 </section>
 
-<section id="works" class="works">
-    <h2>Works</h2>
-    <p>Here are some of my recent projects as a Scripter:</p>
-    <div>
-        <h3>Military Nametag</h3>
-        <img src="https://cdn.discordapp.com/attachments/990142304079708210/1252163527720964187/image.png?ex=669cb929&is=669b67a9&hm=f26493dbb5faef27d73f348df178ef9ad2a348022275390316eac84298c54be6&" alt="Military Nametag">
-        <p>This nametag is for military that has Custom Name and Custom Division.</p>
+<!-- Projects Section -->
+<section id="projects" class="section projects reveal">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">Click on any project to learn more</p>
+
+    <div class="projects-grid">
+      <div class="project-card" data-project="bsp">
+        <div class="project-header">
+          <h3>Boy Scouts of the Philippines</h3>
+          <span class="project-tag">Roleplay System</span>
+        </div>
+        <p>A community-based roleplay system designed to simulate organizational structure and member interaction within a scout community.</p>
+        <div class="project-tech">
+          <span class="tech-badge">Roblox Studio</span>
+          <span class="tech-badge">Lua</span>
+          <span class="tech-badge">Game Design</span>
+        </div>
+      </div>
     </div>
-    <div>
-        <h3>License Card</h3>
-        <img src="https://cdn.discordapp.com/attachments/990142304079708210/1245573088918376492/image.png?ex=669c7a56&is=669b28d6&hm=a0e77b3cdf7669bd5107f691b1d8741a062a8369fc624160dae765fbb59ac21f&" alt="License Card">
-        <p>This is a License Card that is a Trello based.</p>
-    </div>
-    <div>
-        <h3>License Plate</h3>
-        <img src="https://cdn.discordapp.com/attachments/990142304079708210/1245573089299791953/Screenshot_2024-05-30_110301.png?ex=669c7a56&is=669b28d6&hm=16c7e81cd7c71a99f0ffa78e839e5b788fedca4f26b42bb3a3cfe85958a0966e&" alt="License Plate">
-        <p>This is also a Trello Based, its a pack with License Card.</p>
-    </div>
-    <div class="etc">
-        <h3>Many More!</h3>
-        <p></p>
-    </div>
+  </div>
 </section>
 
-<section id="groups" class="groups">
-    <h2>Groups</h2>
-    <p>These are some of the groups I've worked with:</p>
-    <div>
-        <h3><a href="https://www.roblox.com/groups/9887688/FA-Filipino-Army#!/about" target="_blank">Filipino Army by UzamakiTot</a></h3>
-        <p>CURRENTLY WORKING.</p>
+<!-- Skills Section -->
+<section id="skills" class="section skills reveal">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-subtitle">Proficiency levels based on practical experience</p>
+
+    <div class="skills-grid">
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Roblox Studio</span>
+          <span class="skill-percentage">80%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" data-level="80"></div>
+        </div>
+        <p class="skill-desc">Proficient in building, scripting, and testing game environments</p>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Lua Programming</span>
+          <span class="skill-percentage">65%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" data-level="65"></div>
+        </div>
+        <p class="skill-desc">Comfortable with basic to intermediate scripting concepts</p>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">UI/UX Design</span>
+          <span class="skill-percentage">70%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" data-level="70"></div>
+        </div>
+        <p class="skill-desc">Creating functional and aesthetically pleasing interfaces</p>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Problem Solving</span>
+          <span class="skill-percentage">75%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" data-level="75"></div>
+        </div>
+        <p class="skill-desc">Debugging, testing, and iterating on solutions</p>
+      </div>
     </div>
-    <div>
-        <h3><a href="https://www.roblox.com/groups/12778503/Phi-ippine-Army#!/about" target="_blank">Philippine Army by 24kCxtiezz</a></h3>
-        <p>CURRENTLY WORKING.</p>
-    </div>
-    <div>
-        <h3><a href="https://www.roblox.com/groups/6456516/The-Armed-Forced-Of-The-Phillippines-Army#!/about" target="_blank">The Armed Forced Of The Phillippines Army by roblox_justinee</a></h3>
-        <p>CURRENTLY WORKING.</p>
-    </div>
-    <div class="etc">
-        <h3>Many More!</h3>
-        <p></p>
-    </div>
+  </div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>You can contact me at:</p>
-    <ul style="list-style: none; padding: 0;">
-        <li>Gmail: <a href="https://mail.google.com/mail/u/0/#inbox">fdfjdlynrblx@gmail.com</a>
-            <li>Discord: <a href="https://discord.gg" target="_blank">theashexperience</a></li>
-    </li>
+<!-- Contact Section -->
+<section id="contact" class="section contact reveal">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">Let's connect and collaborate</p>
 
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <h3>Email</h3>
+            <p><a href="mailto:fdfjdlynrblx@gmail.com">fdfjdlynrblx@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-icon">💬</span>
+          <div>
+            <h3>Discord</h3>
+            <p><a href="https://discord.com" target="_blank">YourUsername#0000</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formspree Form - Standard HTML Form Submission -->
+      <form class="contact-form" action="https://formspree.io/f/mgokgbjb" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
 </section>
 
-<footer>
-    <p>&copy; 2024 Ash. All rights reserved.</p>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 · Ash. All rights reserved.</p>
+    <p class="footer-subtitle">Currently accepting collaboration opportunities.</p>
+  </div>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    });
-</script>
+<!-- Project Modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeProject()">&times;</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+    <div id="modalDetails" class="modal-details"></div>
+    <a id="modalLink" href="#" target="_blank" class="btn btn-primary">View on Roblox</a>
+  </div>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
