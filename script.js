@@ -1,4 +1,4 @@
-// filepath: c:\Users\NashA\Desktop\Test\script.js
+
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
